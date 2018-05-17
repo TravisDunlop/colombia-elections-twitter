@@ -1,0 +1,37 @@
+% article example for classicthesis.sty
+\documentclass[10pt,a4paper]{article} % KOMA-Script article scrartcl
+\usepackage{lipsum}
+\usepackage{url}
+\usepackage[nochapters]{classicthesis} % nochapters
+
+\begin{document}
+	\pagestyle{plain}
+	\title{\rmfamily\normalfont\spacedallcaps{Text Mining Twitter: Colombia 2018 Elections}}
+	\author{\spacedlowsmallcaps{juan sebastián garcía rodriguez} \\ \spacedlowsmallcaps{travis dunlop}}
+	\date{} % no date
+	
+	\maketitle
+	
+	\begin{abstract}
+		\noindent Between May and June of 2018 the people of Colombia will vote for their next president.  As with any modern election, people are using Twitter, the social media platform, to support candidates they like, discredit the others, and debate who should win.  Twitter provides a massive open forum to create dialogue across the country.  Some groups take advantage of this by creating bots, which automatically post political tweets to in an attempt to sway votors \cite{swaine_2018}.  In our project, we use the text mining skills gained in this course to assess the influence of these bots.  We hope to answer two questions: how many bots are there and who are they supporting?
+		
+	\end{abstract}
+	
+	\section{Introduction}
+		In order to answer these two questions we split the project into two sections:  bot detection and sentiment analysis.  For bot detection we leverage an existing algorithm and use semi-supervised learning to extrapolate it's findings.  With sentiment analysis, we hand-labeled a portion of the tweets and use those to help classify the rest into positive, negative, or neutral. \\
+		
+		\noindent The data we use is a set of [[INSERT NUMBER HERE]] recently collected tweets that mention any of the colombian candidates.  By the end of the analysis we report what percent of the tweets support which candidate, and how many likely bots we were able to detect.
+
+	\section{Bot Detection} 
+
+	\section{Sentiment Analysis}
+	
+	\section{Conclusion}
+	
+	% bib stuff
+	\nocite{*}
+	\addtocontents{toc}{\protect\vspace{\beforebibskip}}
+	\addcontentsline{toc}{section}{\refname}
+	\bibliographystyle{plain}
+	\bibliography{project-report}
+\end{document}
