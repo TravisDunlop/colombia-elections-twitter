@@ -109,9 +109,8 @@ data = pd.read_csv( os.path.join( data_path,"db_tweets.csv" ) , sep = "|", linet
 data_RF = data.merge(labels_,how='inner',left_on = "tweet_id",right_on = "tweet_id")
 data_test = data.merge(labels_test,how='inner',left_on = "tweet_id",right_on = "tweet_id")
 data = data.merge(labels_train,how='left',left_on = "tweet_id",right_on = "tweet_id")
-
-data = data[data.sentiment_label.isnull()].sample(10000)
 data_labeled = data[data.sentiment_label>=0]
+data = data[data.sentiment_label.isnull()].sample(10000)
 
 data = pd.concat([data,data_labeled])
 
@@ -135,12 +134,16 @@ print("done!")
 
 y_test = data_test.sentiment_label
 y_pred = label_prop_model_500.predict(countvectorizer_matrix_test.toarray())
-auc_semi = roc_auc_score (y_test, y_pred)
-roc_semi = roc_curve (y_test, y_pred)
+
+pres_semisup = precision_score(y_test, y_pred,average = 'weighted')
+recall_semisup =  recall_score(y_test, y_pred,average = 'weighted')
+f1_semisup =  f1_score(y_test, y_pred,average = 'weighted')
+acc_semisup =  accuracy_score(y_test, y_pred)
+
 
 #### RF
 ########
-from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import roc_auc_score
 from sklearn.model_selection import RandomizedSearchCV
 import matplotlib.pyplot as plt
@@ -148,12 +151,25 @@ import matplotlib.pyplot as plt
 
 X_train,X_test,y_train,y_test = train_test_split(data_RF.text_tweet,data_RF.sentiment_label,random_state=42)
 
-clean_tweets_train = data.text_tweet.apply (X_train)
-clean_tweets_test = data.text_tweet.apply (X_test)
-countvectorizer_matrix = countvectorizer_.fit_transform (clean_tweets)
+y_test = y_test.reset_index(drop = True)
+y_train = y_train.reset_index(drop = True)
+
+y_test[np.where(np.isin(y_test,99))[0]] = 2
+y_train[np.where(np.isin(y_train,99))[0]] = 2
+
+clean_tweets_train = X_train.apply(preprocessor_tweet)
+clean_tweets_test = X_test.apply(preprocessor_tweet)
+
+countvectorizer_ = CountVectorizer(tokenizer = tokenize_and_stem,
+                                    stop_words = stopwords,
+                                    max_df=0.95,
+                                    min_df=0.002,
+                                    ngram_range=(1, 3))
+
+countvectorizer_matrix = countvectorizer_.fit_transform (clean_tweets_train)
 countvectorizer_matrix_test = countvectorizer_.transform(clean_tweets_test)
 
-model_rf = RandomForestRegressor(**{'n_estimators': 400,
+model_rf = RandomForestClassifier(**{'n_estimators': 400,
  'min_samples_split': 10,
  'min_samples_leaf': 4,
  'max_features': 'auto',
@@ -163,81 +179,18 @@ model_rf = RandomForestRegressor(**{'n_estimators': 400,
 # search across 100 different combinations, and use all available cores
 # Fit the random search model
 
-model_rf.fit (features_train, labels_train)
+model_rf.fit (countvectorizer_matrix, y_train)
 y_pred = model_rf.predict (countvectorizer_matrix_test)
 
-auc_sup = roc_auc_score (y_test, y_pred)
-roc_sup = roc_curve (y_test, y_pred)
+pres_sup = precision_score(y_test, y_pred,average = 'weighted')
+recall_sup =  recall_score(y_test, y_pred,average = 'weighted')
+f1_sup =  f1_score(y_test, y_pred,average = 'weighted')
+acc_sup =  accuracy_score(y_test, y_pred)
 
-########
-#comparing results
-
-
-
-plt.title('Receiver Operating Characteristic')
-plt.plot(roc_semi[0], roc_semi[1], 'g', label = 'Semi-Supervised Label Spreading - AUC : %0.2f' % auc_semi)
-plt.plot(roc_sup[0], roc_sup[1], 'b', label = 'Supervised Random Forest - AUC = %0.2f' % auc_sup)
-plt.legend(loc = 'lower right')
-plt.plot([0, 1], [0, 1],'k--')
-plt.xlim([0, 1])
-plt.ylim([0, 1])
-plt.ylabel('True Positive Rate')
-plt.xlabel('False Positive Rate')
-plt.savefig('roc_curve.png')
-plt.show()
-
-####
-# 500.000
-####
+resultados = pd.DataFrame({"f1_score":[f1_sup,f1_semisup],
+                            "precision":[pres_sup,pres_semisup],
+                            "recall":[recall_sup,recall_semisup],
+                            "accuracy":[acc_sup,acc_semisup]},index=["Supervised","Semisupervised"])
 
 
-
-
-
-
-
-print("\tPrecision: %1.3f" % precision_score(y_test, y_pred,average = 'weighted'))
-print("\tRecall: %1.3f" % recall_score(y_test, y_pred,average = 'weighted'))
-print("\tF1: %1.3f\n" % f1_score(y_test, y_pred,average = 'weighted'))
-print("\tAccuracy: %1.3f\n" % accuracy_score(y_test, y_pred))
-
-
-
-
-# save the model to disk
-filename = 'label_prop_model_500.sav'
-pickle.dump(model, open(os.path.join(data_path,filename), 'wb'))
-
-del data
-del label_prop_model_500
-del countvectorizer_matrix
-gc.collect()
-
-####
-#200.000
-####
-print("training with 100K obs")
-
-data = data.merge( labels_train,how='left',left_on = "tweet_id",right_on = "tweet_id" )
-data_labeled = data[ data.sentiment_label >= 0 ]
-data = data [ data.sentiment_label.isnull() ].sample( 200000 )
-data = pd.concat( [data,data_labeled] )
-clean_tweets = data.text_tweet.apply ( preprocessor_tweet )
-print("cleaning done!")
-countvectorizer_matrix = countvectorizer_.fit_transform ( clean_tweets )
-print("fitting model knn = 3")
-label_prop_model_200 = LabelSpreading(kernel = 'knn',n_jobs = 3,n_neighbors=3)
-label_prop_model_200.fit ( countvectorizer_matrix.toarray(),labels_g )
-print("done!")
-
-y_test = labels_test.copy()
-y_pred = label_prop_model_200.predict(countvectorizer_matrix_test.toarray())
-
-print("\tPrecision: %1.3f" % precision_score(y_test, y_pred))
-print("\tRecall: %1.3f" % recall_score(y_test, y_pred))
-print("\tF1: %1.3f\n" % f1_score(y_test, y_pred))
-
-
-# save the model to disk
-filename = 'label_prop_model_200.sav'
-pickle.dump(model, open( os.path.join(data_path,filename), 'wb') )
+round(resultados,3).to_csv(os.path.join(data_path,"results_classification.csv"))

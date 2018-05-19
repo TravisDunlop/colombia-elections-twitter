@@ -16,7 +16,7 @@ import pickle
 pd.set_option('display.max_colwidth', -1)
 
 data_path =  "/home/juan/Desktop/Text_Mining/Om_Project/Data"
-week=11
+week=16
 with open(os.path.join(data_path,"clean_tweets_week_"+str(week)), 'rb') as fp:
     tweets_week = pickle.load(fp)
 fp.close()
