@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  18 MAY 2018 22:11
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  19 MAY 2018 12:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -429,25 +429,93 @@ n" for footnote setup (not 100\% the same as with KOMA).
 Package: scrtime 2018/03/30 v3.25 KOMA-Script package (time of LaTeX run)
 )
 (/usr/local/texlive/2018/texmf-dist/tex/latex/carlisle/remreset.sty))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen127
+\Gin@req@width=\dimen128
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/multicol.sty
+Rollback for package 'multicol' requested -> date 2018-04-01.
+         Best approximation is the release introduced on 2018-04-01.
+Package: multicol 2018/04/01 v1.8r multicolumn formatting (FMi)
+\c@tracingmulticols=\count109
+\mult@box=\box27
+\multicol@leftmargin=\dimen129
+\c@unbalance=\count110
+\c@collectmore=\count111
+\doublecol@number=\count112
+\multicoltolerance=\count113
+\multicolpretolerance=\count114
+\full@width=\dimen130
+\page@free=\dimen131
+\premulticols=\dimen132
+\postmulticols=\dimen133
+\multicolsep=\skip88
+\multicolbaselineskip=\skip89
+\partial@page=\box28
+\last@line=\box29
+\maxbalancingoverflow=\dimen134
+\mult@rightbox=\box30
+\mult@grightbox=\box31
+\mult@gfirstbox=\box32
+\mult@firstbox=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\c@columnbadness=\count115
+\c@finalcolumnbadness=\count116
+\last@try=\dimen135
+\multicolovershoot=\dimen136
+\multicolundershoot=\dimen137
+\mult@nat@firstbox=\box51
+\colbreak@box=\box52
+\mc@col@check@num=\count117
+)
 (./project-report.aux)
 \openout1 = `project-report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-\AtBeginShipoutBox=\box27
-Package hyperref Info: Link coloring OFF on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
+LaTeX Font Info:    ... okay on input line 10.
+\AtBeginShipoutBox=\box53
+Package hyperref Info: Link coloring OFF on input line 10.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -455,11 +523,11 @@ Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count109
+\c@section@level=\count118
 )
-LaTeX Info: Redefining \ref on input line 7.
-LaTeX Info: Redefining \pageref on input line 7.
-LaTeX Info: Redefining \nameref on input line 7.
+LaTeX Info: Redefining \ref on input line 10.
+LaTeX Info: Redefining \pageref on input line 10.
+LaTeX Info: Redefining \nameref on input line 10.
 
 (./project-report.out) (./project-report.out)
 \@outlinefile=\write3
@@ -468,20 +536,36 @@ LaTeX Info: Redefining \nameref on input line 7.
 
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count110
-\scratchdimen=\dimen127
-\scratchbox=\box28
-\nofMPsegments=\count111
-\nofMParguments=\count112
+\scratchcounter=\count119
+\scratchdimen=\dimen138
+\scratchbox=\box54
+\nofMPsegments=\count120
+\nofMParguments=\count121
 \everyMPshowfont=\toks18
-\MPscratchCnt=\count113
-\MPscratchDim=\dimen128
-\MPnumerator=\count114
-\makeMPintoPDFobject=\count115
+\MPscratchCnt=\count122
+\MPscratchDim=\dimen139
+\MPnumerator=\count123
+\makeMPintoPDFobject=\count124
 \everyMPtoPDFconversion=\toks19
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 )
-\big@size=\dimen129
-LaTeX Info: Redefining \microtypecontext on input line 7.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\big@size=\dimen140
+LaTeX Info: Redefining \microtypecontext on input line 10.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -489,34 +573,35 @@ Package microtype Info: No font expansion.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
- (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-ppl.cfg
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-ppl.cfg
 File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 )
-LaTeX Font Info:    Try loading font information for OT1+pplx on input line 14.
+LaTeX Font Info:    Try loading font information for OT1+pplx on input line 17.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1pplx.fd
 File: ot1pplx.fd 2004/09/06 font definitions for OT1/pplx.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 14.
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 17.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 14.
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 17.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 14.
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 17.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 14.
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 17.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/psnfss/ot1zplm.fd
@@ -527,51 +612,76 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/pplj/bx/n' in size <9> not available
-(Font)              Font shape `OT1/pplj/b/n' tried instead on input line 15.
+(Font)              Font shape `OT1/pplj/b/n' tried instead on input line 18.
 Package microtype Info: Character `013' is missing
 (microtype)             in font `OT1/pplj/m/sc/10'.
 (microtype)             Ignoring protrusion settings for this character.
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--27
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
 
  []
 
 [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./project-report.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 39.
- [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 39.
+LaTeX Font Info:    Try loading font information for OMS+pplj on input line 35.
+
+LaTeX Font Info:    No file OMSpplj.fd. on input line 35.
+
+
+LaTeX Font Warning: Font shape `OMS/pplj/m/n' undefined
+(Font)              using `OMS/cmsy/m/n' instead
+(Font)              for symbol `textbullet' on input line 35.
+
+<../images/roc_curve.png, id=39, 433.62pt x 289.08pt>
+File: ../images/roc_curve.png Graphic file (type png)
+<use ../images/roc_curve.png>
+Package pdftex.def Info: ../images/roc_curve.png  used on input line 50.
+(pdftex.def)             Requested size: 302.39795pt x 201.60915pt.
+(./project-report.bbl [2 <../images/roc_curve.png>]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
+ [3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
  (./project-report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 39.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 39.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
 Package rerunfilecheck Info: File `project-report.out' has not changed.
 (rerunfilecheck)             Checksum: 23B2D8CF3DD2B18BAC2871E0927C7AAE;238.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 39.
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
  ) 
 Here is how much of TeX's memory you used:
- 10236 strings out of 492649
- 188060 string characters out of 6129622
- 454737 words of memory out of 5000000
- 13968 multiletter control sequences out of 15000+600000
- 40417 words of font info for 90 fonts, out of 8000000 for 9000
+ 10717 strings out of 492649
+ 195632 string characters out of 6129622
+ 464071 words of memory out of 5000000
+ 14412 multiletter control sequences out of 15000+600000
+ 40585 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,21n,79p,1512b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,21n,79p,1533b,527s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2018/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2
-018/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/tex
-mf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist
-/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on project-report.pdf (2 pages, 57251 bytes).
+exlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/tex
+live/2018/texmf-dist/fonts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/201
+8/texmf-dist/fonts/type1/public/fpl/fplrij8a.pfb></usr/local/texlive/2018/texmf
+-dist/fonts/type1/urw/palatino/uplb8a.pfb></usr/local/texlive/2018/texmf-dist/f
+onts/type1/urw/palatino/uplr8a.pfb></usr/local/texlive/2018/texmf-dist/fonts/ty
+pe1/urw/palatino/uplri8a.pfb>
+Output written on project-report.pdf (3 pages, 103950 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 14889 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 87 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 13 named destinations out of 1000 (max. 500000)
+ 15406 words of extra memory for PDF output out of 17280 (max. 10000000)
 

@@ -6,6 +6,25 @@ Clayton~A. Davis, Onur Varol, Emilio Ferrara, Alessandro Flammini, and Filippo
 \newblock Botornot: {A} system to evaluate social bots.
 \newblock {\em CoRR}, abs/1602.00975, 2016.
 
+\bibitem{Lee2011SevenMW}
+Kyumin Lee, Brian Eoff, and James Caverlee.
+\newblock Seven months with the devils: A long-term study of content polluters
+  on twitter.
+\newblock In {\em ICWSM}, 2011.
+
+\bibitem{mueller_rauh_2018}
+HANNES MUELLER and CHRISTOPHER RAUH.
+\newblock Reading between the lines: Prediction of political violence using
+  newspaper text.
+\newblock {\em American Political Science Review}, 112(2):358–375, 2018.
+
+\bibitem{rehurek_lrec}
+Radim {\v R}eh{\r u}{\v r}ek and Petr Sojka.
+\newblock {Software Framework for Topic Modelling with Large Corpora}.
+\newblock In {\em {Proceedings of the LREC 2010 Workshop on New Challenges for
+  NLP Frameworks}}, pages 45--50, Valletta, Malta, May 2010. ELRA.
+\newblock \url{http://is.muni.cz/publication/884893/en}.
+
 \bibitem{swaine_2018}
 Jon Swaine.
 \newblock Twitter admits far more russian bots posted on election than it had
