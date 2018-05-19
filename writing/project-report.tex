@@ -60,8 +60,28 @@
 	In the end we had labels from 4,247 users and we had features from 8,721.  Of the whole dataset, we find that 3\% of them are bots.
 		
 	\section{Sentiment Analysis}
-	In political times people tend to express more fiercely their feelings about the current situation in a country. This time Colombians has mixed feelings about what's next for the country since the peace deal is being implemented and Colombia is still living with crime and war. To approach such negative feelings we implemented topic modeling to extract weekly the hot topics in our data set and in parallel we train a model with a semi-supervised tecnique for learning the sentiment in those tweets. Respetively, we used a Latent Dirichlet Allocation(LDA) implementation from the package gensim and LabelSpreading from sklearn.
+In political times people tend to express in social media more fiercely their feelings about the current situation  This time Colombians are divided between people who support the peace deal and people who support a reformulation of it. Also, there is a lot of uncertainty about what's next for the country since the peace deal is being implemented and Colombia is still living with crime and war. To approach such negative feelings we implement topic modeling to extract weekly topics in our data set and in parallel we train a model with a semi-supervised technique for learning the sentiment in those tweets. Respectively, we used a Latent Dirichlet Allocation(LDA) implementation from the package gensim and LabelSpreading from sklearn.
+
+For learning the weekly topics we processed the tweets from each user as an entire document and then we gathered this as a weekly collection of documents. Since we noticed that the resulting topics from the model were more diffused when we provided each tweet as a document. For the topic modeling, we processed only the raw data for the week between April 16 to April 22. Additionally, during the training process, we noticed that some words (such as, "Gustavo petrol","Colombia") were highly frequent in each document, such that those were present in all the resulting topics. Then we decided to add them as stopwords. Also, for the sentiment analysis, we used a randomized subset of the data for labeling and we manually labeled 1800 tweets. With this data, we ran a supervised classification algorithm and a semisupervised classification algorithm.
 	
+		\subsection{Results}
+
+The topics modeling was trained with several topics in order to find the best fit for the tweets in this week for model selection we used the coherence score and perplexity, which are metrics implemented for evaluating these models. The best model that ge got has 10 topics with a coherence score of 0.46 and perplexity around 8.7. In the following wordclouds we can see the 4 most important topics for the week:
+
+\begin{figure}[h!]
+\includegraphics[width=0.975\linewidth]{week_16.png}
+\centering
+\end{figure}
+\pagebreak
+
+In the first topic, we see words related to Alvaro Uribe and recent news about the "Falsos Positivos" scandal.  During Uribe's term as president of Colombia ten thousand young men were dressed up as FARC members and murdered by the Colombian military.  During the week we analyzed tweets, a key witness tying Uribe to this scandal was found murdered.
+
+The second topic, show us a topic related to tweets that were supporting Gustavo Petro campaign "Colombia Humana", where the words directly say "petropresidente". Interestingly the word Claudia Lopez appears probable because Petro's followers want that he merge forces Petro's campaign with Sergio Fajardo and Claudia Lopez.
+
+The third topic introduces us to the current president and the peace deal. People tweets probably talk about the fact the current president has to give to FARC seats in the Senate and other political rights as an official party. Therefore, people do not still process this as a good fact, also they might think that FARC is still a group of narcos and terrorists. Finally, the fourth topic is about Venezuela and the cryptocurrency Petro which is something that we were expecting since one of the keywords in our twitter scrapper is taking "Petro" as a keyword.
+
+
+		
 	\section{Conclusion}
 	
 	In the end, we have shown some evidence that

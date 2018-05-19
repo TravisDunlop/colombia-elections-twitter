@@ -16,7 +16,7 @@ import pickle
 pd.set_option('display.max_colwidth', -1)
 
 data_path =  "/home/juan/Desktop/Text_Mining/Om_Project/Data"
-week=11
+week=16
 with open(os.path.join(data_path,"clean_tweets_week_"+str(week)), 'rb') as fp:
     tweets_week = pickle.load(fp)
 fp.close()
@@ -127,11 +127,11 @@ lda_model = gensim.models.ldamulticore.LdaMulticore(corpus=corpus,
 
 for topic in lda_model.print_topics():
     print(topic)
-# # Compute Coherence Score
-# coherence_model_lda = CoherenceModel(model=lda_model, texts=data_lemmatized, dictionary=id2word, coherence='c_v')
-# coherence_lda = coherence_model_lda.get_coherence()
-# print(lda_model.log_perplexity(corpus))
-# print('\nCoherence Score: ', coherence_lda)
+# Compute Coherence Score
+coherence_model_lda = CoherenceModel(model=lda_model, texts=data_lemmatized, dictionary=id2word, coherence='c_v')
+coherence_lda = coherence_model_lda.get_coherence()
+print(lda_model.log_perplexity(corpus))
+print('\nCoherence Score: ', coherence_lda)
 
 import matplotlib.pyplot as plt
 from wordcloud import WordCloud, STOPWORDS
@@ -149,71 +149,5 @@ for t in range(2):
         ax[t,j].set_title("Topic #" + str(i)+"\n")
         ax[t,j].axis('off')
         i+=1
-plt.savefig("/home/juan/Desktop/Text_Mining/Om_Project/colombia-elections-twitter/sentiment-analysis/figs/topics_week_"+str(week)+".svg",dpi=300,format = "svg")
+plt.savefig("/home/juan/Desktop/Text_Mining/Om_Project/colombia-elections-twitter/sentiment-analysis/figs/topics_week_"+str(week)+".png",dpi=300,format = "png",bbox_inches="tight")
 plt.show()
-
-
-# # Plotting tools
-# import pyLDAvis
-# import pyLDAvis.gensim  # don't skip this
-# import matplotlib.pyplot as plt
-# %matplotlib inline
-
-
-
-
-
-
-
-
-
-# def tokenize_and_stem(text):
-#     # first tokenize by sentence, then by word to ensure that punctuation is caught as it's own token
-#     tokens = [word for sent in nltk.sent_tokenize(text) for word in nltk.word_tokenize(sent)]
-#     filtered_tokens = []
-#     # filter out any tokens not containing letters (e.g., numeric tokens, raw punctuation)
-#     for token in tokens:
-#         if re.search('[a-zA-Z]', token):
-#             filtered_tokens.append(token)
-#     stems = [stemmer.stem(t) for t in filtered_tokens]
-#     return stems
-#
-# def tokenize_only(text):
-#     # first tokenize by sentence, then by word to ensure that punctuation is caught as it's own token
-#     tokens = [word.lower() for sent in nltk.sent_tokenize(text) for word in nltk.word_tokenize(sent)]
-#     filtered_tokens = []
-#     # filter out any tokens not containing letters (e.g., numeric tokens, raw punctuation)
-#     for token in tokens:
-#         if re.search('[a-zA-Z]', token):
-#             filtered_tokens.append(token)
-#     return filtered_tokens
-# ############model with sklearn
-# from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer, VectorizerMixin
-# countvectorizer_ = CountVectorizer(tokenizer = tokenize_only,
-#                                     stop_words = stopwords,
-#                                     max_df=0.95,
-#                                     min_df=0.002,
-#                                     ngram_range=(1, 2))
-#
-# countvectorizer_matrix = countvectorizer_.fit_transform(clean_tweets)
-# countvectorizer_matrix.shape
-# countvectorizer_.stop_words_
-# countvectorizer_.get_feature_names()
-#
-# from sklearn.decomposition import LatentDirichletAllocation
-#
-# LDA = LatentDirichletAllocation(n_components=20,
-#                                 learning_method = 'online',
-#                                 verbose = True,
-#                                 n_jobs=-1)
-# LDA.fit(countvectorizer_matrix)
-#
-# print("\nTopics in LDA model:")
-# countvectorizer_names = countvectorizer_.get_feature_names()
-# for topic_idx, topic in enumerate(LDA.components_):
-#     message = "Topic #%d: " % topic_idx
-#     message += " ".join([countvectorizer_names[i]
-#                          for i in topic.argsort()[:-20 - 1:-1]])
-#     print(message)
-#
-# from wordcloud import WordCloud
