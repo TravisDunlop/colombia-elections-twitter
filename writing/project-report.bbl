@@ -1,7 +1,19 @@
 \begin{thebibliography}{1}
 
+\bibitem{falso_positivos_1}
+{Asesinan a testigo del caso Cepeda-Uribe en Colombia}.
+\newblock
+  \url{https://www.telesurtv.net/news/asesinan-testigo-caso-uribe-cepeda-colombia-20180416-0016.html}.
+\newblock Accessed: 2018-07-19.
+
+\bibitem{falso_positivos_2}
+{La historia inédita de los falsos positivos }.
+\newblock
+  \url{https://www.semana.com/nacion/articulo/la-historia-inedita-falsos-positivos/349851-3}.
+\newblock Accessed: 2018-07-19.
+
 \bibitem{twitter}
-{Twitter API }.
+{Twitter API}.
 \newblock \url{https://developer.twitter.com/en/docs}.
 \newblock Accessed: 2018-07-19.
 
