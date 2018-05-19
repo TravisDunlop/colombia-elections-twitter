@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{twitter}
+{Twitter API }.
+\newblock \url{https://developer.twitter.com/en/docs}.
+\newblock Accessed: 2018-07-19.
+
 \bibitem{DavisVFFM16}
 Clayton~A. Davis, Onur Varol, Emilio Ferrara, Alessandro Flammini, and Filippo
   Menczer.
