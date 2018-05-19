@@ -4,45 +4,45 @@ The top-level auxiliary file: project-report.aux
 The style file: plain.bst
 Database file #1: project-report.bib
 Warning--to sort, need author or key in twitter
-You've used 6 entries,
+You've used 7 entries,
             2118 wiz_defined-function locations,
-            535 strings with 5014 characters,
-and the built_in function-call counts, 1809 in all, are:
-= -- 175
-> -- 80
+            541 strings with 5379 characters,
+and the built_in function-call counts, 2589 in all, are:
+= -- 240
+> -- 163
 < -- 1
-+ -- 32
-- -- 26
-* -- 114
-:= -- 302
-add.period$ -- 20
-call.type$ -- 6
-change.case$ -- 31
++ -- 65
+- -- 58
+* -- 196
+:= -- 443
+add.period$ -- 23
+call.type$ -- 7
+change.case$ -- 50
 chr.to.int$ -- 0
-cite$ -- 7
-duplicate$ -- 73
-empty$ -- 151
-format.name$ -- 26
-if$ -- 384
+cite$ -- 8
+duplicate$ -- 84
+empty$ -- 179
+format.name$ -- 58
+if$ -- 525
 int.to.chr$ -- 0
-int.to.str$ -- 6
-missing$ -- 5
-newline$ -- 34
-num.names$ -- 10
-pop$ -- 39
+int.to.str$ -- 7
+missing$ -- 6
+newline$ -- 39
+num.names$ -- 12
+pop$ -- 56
 preamble$ -- 1
-purify$ -- 25
+purify$ -- 43
 quote$ -- 0
-skip$ -- 51
+skip$ -- 58
 stack$ -- 0
-substring$ -- 81
-swap$ -- 14
+substring$ -- 117
+swap$ -- 15
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 24
+type$ -- 28
 warning$ -- 1
-while$ -- 14
-width$ -- 7
-write$ -- 68
+while$ -- 18
+width$ -- 8
+write$ -- 79
 (There was 1 warning)
