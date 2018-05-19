@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{twitter}
+{Twitter API }.
+\newblock \url{https://developer.twitter.com/en/docs}.
+\newblock Accessed: 2018-07-19.
+
 \bibitem{DavisVFFM16}
 Clayton~A. Davis, Onur Varol, Emilio Ferrara, Alessandro Flammini, and Filippo
   Menczer.
@@ -17,6 +22,13 @@ HANNES MUELLER and CHRISTOPHER RAUH.
 \newblock Reading between the lines: Prediction of political violence using
   newspaper text.
 \newblock {\em American Political Science Review}, 112(2):358–375, 2018.
+
+\bibitem{scikit-learn}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock {\em Journal of Machine Learning Research}, 12:2825--2830, 2011.
 
 \bibitem{rehurek_lrec}
 Radim {\v R}eh{\r u}{\v r}ek and Petr Sojka.
